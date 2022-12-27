@@ -100,3 +100,17 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 - Membuat file .env-sample
 - Git commit
+
+### 4. Fixing error pada settings.py tentang db parameter
+
+-BEFORE
+-'DB_NAME': config('DB_NAME'),
+-'DB_USER': config('DB_USER'),
+-'DB_PASSWORD': config('DB_PASSWORD'),
+-'DB_HOST': config('DB_HOST')
+
+-AFTER
+-'NAME': config('DB_NAME'),
+-'USER': config('DB_USER'),
+-'PASSWORD': config('DB_PASSWORD'),
+-'HOST': config('DB_HOST')
