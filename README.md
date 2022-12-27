@@ -39,3 +39,9 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 - membuat git commit dan upload file ke repositori
 - memastikan keberhasilan meng-upload file
+
+### 7. Membuat hallo world
+
+- Membuat home path
+- Membuat def home method
+- Git commit
