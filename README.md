@@ -124,3 +124,6 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing
 - Git commit
 
+### 2. Modified app name
+
+- Modified nama app from name='accounts' to name='app.accounts'
