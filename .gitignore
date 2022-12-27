@@ -4,6 +4,7 @@
 venv3932
 sourcecodes
 main/static/
+static
 
 __pycache__/
 *.py[cod]
