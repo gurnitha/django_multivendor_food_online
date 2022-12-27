@@ -62,3 +62,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Membuat superuser
 - Testing
 - Git commit
+
+### 10. Menambahkan dan loading static files serta template 
+
+- Membuat static folder: main/static
+- Menambahkan static files
+- Setting up static_root dan staticfiles_dirs
+- Menambahkan template pada home page
+- Loading static files
+- Testing
+- Git commit
