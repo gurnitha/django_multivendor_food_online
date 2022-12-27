@@ -72,3 +72,15 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Loading static files
 - Testing
 - Git commit
+
+## 03. Setting up PostgreSQL db
+
+- Download PostgreSQL
+- Instal PostgreSQL
+- Membuat db
+- Konek db dgn aplikasi
+- Install psycopg2 module
+- Jalankan migrasi
+- Membuat superuser
+- Testing
+- Git commit
