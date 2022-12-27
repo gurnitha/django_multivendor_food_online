@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+
+# by my ing
+venv3932
+
 __pycache__/
 *.py[cod]
 *$py.class
