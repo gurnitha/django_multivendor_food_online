@@ -95,3 +95,8 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Memasang parameter konfigurasi.env pada settings.py
 - Testing
 - Git commit 
+
+### 3. Membuat .env-sample file
+
+- Membuat file .env-sample
+- Git commit
