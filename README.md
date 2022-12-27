@@ -114,3 +114,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - 'USER': config('DB_USER'),
 - 'PASSWORD': config('DB_PASSWORD'),
 - 'HOST': config('DB_HOST')
+
+## 04. Custom user model, Media files, dan Django signals
+
+### 1. Membuat app baru app/accounts
+
+- Membuat app baru dengan nama accounts
+- Register app accounts pada settings.py
+- Testing
+- Git commit
+
