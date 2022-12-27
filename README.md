@@ -45,3 +45,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Membuat home path
 - Membuat def home method
 - Git commit
+
+### 8. Membuat home page
+
+- Membuat folder templates
+- Mengakses templates dari settings.py
+- Membuat file templates/home.html
+- Membuat home page
+- Memodifikasi def home method
+- Testing
+- Git commit 
