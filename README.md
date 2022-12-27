@@ -86,3 +86,12 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Membuat superuser
 - Testing
 - Git commit
+
+### 2. Melindungi konfigurasi parameter db, SECRET_KEY, dan DEBUG
+
+- Instal python-decouple
+- Membuat .env file
+- Membuat konfigurasi parameter SECRET_KEY, DEBUG, dan DB pada .env
+- Memasang parameter konfigurasi.env pada settings.py
+- Testing
+- Git commit 
