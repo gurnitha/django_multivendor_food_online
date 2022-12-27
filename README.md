@@ -75,6 +75,8 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 ## 03. Setting up PostgreSQL db
 
+### 1. Membuat konfigurasi db
+
 - Download PostgreSQL
 - Instal PostgreSQL
 - Membuat db
