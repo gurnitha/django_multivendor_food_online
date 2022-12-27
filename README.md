@@ -55,3 +55,10 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Memodifikasi def home method
 - Testing
 - Git commit 
+
+### 9. Membuat superuser
+
+- Menjalankan migrasi
+- Membuat superuser
+- Testing
+- Git commit
