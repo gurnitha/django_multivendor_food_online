@@ -139,3 +139,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 ### 3.3 Membuat Custom User - Part 3: create superuser
 
 - Membuat def create_superuser method
+
+### 3.4 Membuat Custom User - Part 4: create CustomUser class
+
+- Membuat CustomUser class
