@@ -179,3 +179,9 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Buat filter: filter_horizontal = (), list_filter = (), dan fieldsets = ()
 - Testing
 - Git commit
+
+### 5.2. Membuat Password tidak bisa diedit - Part 2: Kustomais tampilan pada admin panel
+
+- Membuat filter pada fields dari CustomUserAdmin class
+- Testing
+- Git commit
