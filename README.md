@@ -128,23 +128,25 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 - Modified nama app from name='accounts' to name='app.accounts'
 
-### 3.1 Membuat Custom User - Part 1: basics
+## 05 Membuat Custom User
+
+### 5.1 Membuat Custom User - Part 1: basics
 
 - Membuat class UserManager and CustomUser
 
-### 3.2 Membuat Custom User - Part 2: create user
+### 5.2 Membuat Custom User - Part 2: create user
 
 - Membuat def create_user method
 
-### 3.3 Membuat Custom User - Part 3: create superuser
+### 5.3 Membuat Custom User - Part 3: create superuser
 
 - Membuat def create_superuser method
 
-### 3.4 Membuat Custom User - Part 4: create CustomUser class
+### 5.4 Membuat Custom User - Part 4: create CustomUser class
 
 - Membuat CustomUser class
 
-### 3.5 Membuat Custom User - Part 5: register CustomeUser to settings.py
+### 5.5 Membuat Custom User - Part 5: register CustomeUser to settings.py
 
 - Register CustomUser model pada settings.py
 - We need to tell Django that we are not using its default user model anymore.
@@ -154,7 +156,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - CustomUser model membuat error karena di dalam database sudah ada tabel auth_user
 - Git commit
 
-### 3.6 Membuat Custom User - Part 6: Menghilangkan error
+### 5.6 Membuat Custom User - Part 6: Menghilangkan error
 
 - Penyebab error: membuat tabel CustomUser sedangkan tabel auth_user sudah ada di dalam db
 - Menghilangkan error: hapus file migrasi dan hapus database dan buat database baru
@@ -164,15 +166,15 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: customuser model tidak tampak pada admin panel
 - Git commit
 
-### 3.7 Membuat Custom User - Part 7: Register CustomUser model pada admin
+### 5.7 Membuat Custom User - Part 7: Register CustomUser model pada admin
 
 - Register CustomUser model pada admin
 - Testing
 - Git commit
 
-## 05. Membuat Password tidak bisa diedit
+## 06. Membuat Password tidak bisa diedit
 
-### 5.1. Membuat Password tidak bisa diedit - Part 1: Membuat CustomUserAdmin class
+### 6.1. Membuat Password tidak bisa diedit - Part 1: Membuat CustomUserAdmin class
 
 - Membuat CustomUserAdmin class
 - Gunakan module UserAdmin sebagai parameter untuk modifikasi tampilan pada admin panel
@@ -180,7 +182,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing
 - Git commit
 
-### 5.2. Membuat Password tidak bisa diedit - Part 2: Kustomais tampilan pada admin panel
+### 6.2. Membuat Password tidak bisa diedit - Part 2: Kustomais tampilan pada admin panel
 
 - Membuat filter pada fields dari CustomUserAdmin class
 - Testing
