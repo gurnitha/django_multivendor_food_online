@@ -163,3 +163,9 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Jalankan lokal server
 - Testing: customuser model tidak tampak pada admin panel
 - Git commit
+
+### 3.7 Membuat Custom User - Part 7: Register CustomUser model pada admin
+
+- Register CustomUser model pada admin
+- Testing
+- Git commit
