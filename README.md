@@ -153,3 +153,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing
 - CustomUser model membuat error karena di dalam database sudah ada tabel auth_user
 - Git commit
+
+### 3.6 Membuat Custom User - Part 6: Menghilangkan error
+
+- Penyebab error: membuat tabel CustomUser sedangkan tabel auth_user sudah ada di dalam db
+- Menghilangkan error: hapus file migrasi dan hapus database dan buat database baru
+- Jalankan migrasi
+- Buat superuser
+- Jalankan lokal server
+- Testing: customuser model tidak tampak pada admin panel
+- Git commit
