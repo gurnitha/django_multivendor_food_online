@@ -187,3 +187,14 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Membuat filter pada fields dari CustomUserAdmin class
 - Testing
 - Git commit
+
+## 07. Membuat UserProfile model
+
+- Membuat UserProfile model
+- Menginstal modul Pillow untuk gambar
+- Menjalankan migrasi
+- Meregistrasi UserProfile model pada admin
+- Testing: link gambar tidak berfungsi karena media file belum disetup
+- Git commit
+
+ 

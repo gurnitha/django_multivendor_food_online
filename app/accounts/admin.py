@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 # Locals
-from app.accounts.models import CustomUser
+from app.accounts.models import CustomUser, UserProfile
 
 # Register your models here.
 
@@ -17,6 +17,7 @@ class CustomUserAdmin(UserAdmin):
     fieldsets = ()
 
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(UserProfile)
 
 
 
