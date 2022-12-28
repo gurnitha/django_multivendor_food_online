@@ -143,3 +143,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 ### 3.4 Membuat Custom User - Part 4: create CustomUser class
 
 - Membuat CustomUser class
+
+### 3.5 Membuat Custom User - Part 5: register CustomeUser to settings.py
+
+- Register CustomUser model pada settings.py
+- We need to tell Django that we are not using its default user model anymore.
+- Instead, we are using our CustomUser model that we have created.
+- AUTH_USER_MODEL = 'accounts.CustomUser'
+- Testing
+- CustomUser model membuat error karena di dalam database sudah ada tabel auth_user
+- Git commit

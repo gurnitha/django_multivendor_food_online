@@ -142,6 +142,11 @@ STATICFILES_DIRS = [
     'main/static'
 ]
 
+"""
+We need to tell Django that we are not using its default user model anymore.
+Instead, we are using our CustomUser model that we have created.
+"""
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
