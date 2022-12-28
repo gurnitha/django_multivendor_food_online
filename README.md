@@ -128,6 +128,10 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 - Modified nama app from name='accounts' to name='app.accounts'
 
-### 3. Membuat Custom User - Part 1: basics
+### 3.1 Membuat Custom User - Part 1: basics
 
 - Membuat class UserManager and CustomUser
+
+### 3.2 Membuat Custom User - Part 2: create user
+
+- Membuat def create_user method
