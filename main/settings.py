@@ -142,6 +142,10 @@ STATICFILES_DIRS = [
     'main/static'
 ]
 
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
+
 """
 We need to tell Django that we are not using its default user model anymore.
 Instead, we are using our CustomUser model that we have created.

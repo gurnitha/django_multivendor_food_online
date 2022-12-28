@@ -197,4 +197,17 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: link gambar tidak berfungsi karena media file belum disetup
 - Git commit
 
+## 08. Mensetup media file
+
+- Menghapus users folder
+- Membuat konfigurasi media file pada settings.py
+- Pada main/urls.py import django.conf import settings
+- Pada main/urls.py import django.conf.urls.static import static
+- Membuat path media file pada main/urls.py
+- Membuat media folder
+- Mengupload ulang gambar user
+- Testing: berhasil
+- Git commit
+
+
  
