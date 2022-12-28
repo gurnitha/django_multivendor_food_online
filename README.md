@@ -169,3 +169,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Register CustomUser model pada admin
 - Testing
 - Git commit
+
+## 05. Membuat Password tidak bisa diedit
+
+### 5.1. Membuat Password tidak bisa diedit - Part 1: Membuat CustomUserAdmin class
+
+- Membuat CustomUserAdmin class
+- Gunakan module UserAdmin sebagai parameter untuk modifikasi tampilan pada admin panel
+- Buat filter: filter_horizontal = (), list_filter = (), dan fieldsets = ()
+- Testing
+- Git commit
