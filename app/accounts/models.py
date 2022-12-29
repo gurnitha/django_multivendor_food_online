@@ -208,9 +208,12 @@ def post_save_create_profile_receiver(sender, instance, created, **kwargs):
         to be able to update User profile
         '''
     else:
-        '''If User profile is updated,
-        then 'created' is false
         '''
+        1. If User profile is updated, then 'created' is false.
+        2. Create User profile and save it.
+        '''
+        profile = UserProfile.objects.get(CustomUser=instance)
+        profile.save()
         print('User profile is updated')    
 
 '''Bellow is the way to connect with the receiver.

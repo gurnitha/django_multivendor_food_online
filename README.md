@@ -233,3 +233,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - dan print('User profile is updated')
 - Testing: berhasil
 - Git commit 
+
+### 9.4 Django Signals To Create User Profile - Part 4: Meng-update user yang profilenya telah dihapus (2)
+
+- Update: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
+- dengan yang di bawah ini:
+- profile = UserProfile.objects.get(CustomUser=instance)
+- profile.save()
+- print('User profile is updated')  
+- Tesing: hapus User profile dan update user yang sama, hasil error
+- Git commit
