@@ -243,3 +243,10 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - print('User profile is updated')  
 - Tesing: hapus User profile dan update user yang sama, hasil error
 - Git commit
+
+### 9.5 Django Signals To Create User Profile - Part 5: Menggunakan try block untuk atasi masalah di atas(3)
+
+- Update: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
+- Gunakan try block
+- Testing: berhasil
+- Git commit
