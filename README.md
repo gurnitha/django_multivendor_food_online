@@ -345,3 +345,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   templates/accounts/registerUser.html (load form)
 - Testing: berhasil
 - Git commit
+
+### 10.6.2 User Registration Form Implementation - Part 2: Loading form instan pada RegisterUser form
+
+- modified:   app/accounts/forms.py (menambahkan password dan confirm_password field)
+- modified:   app/accounts/urls.py (koreksi nama path dari registeruer menjadi registeruser)
+- modified:   templates/accounts/registerUser.html (loading form instan)
+- Testing: berhasil
+- Git commit

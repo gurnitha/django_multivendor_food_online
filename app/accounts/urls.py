@@ -7,5 +7,5 @@ from django.urls import path
 from app.accounts import views 
 
 urlpatterns = [
-	path('registeruser', views.registeruser, name='registeruer'),    
+	path('registeruser', views.registeruser, name='registeruser'),    
 ] 

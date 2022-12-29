@@ -7,6 +7,9 @@ from django import forms
 from app.accounts.models import CustomUser
 
 class UserRegistrationForm(forms.ModelForm):
+	# Membuat field password dan confirm password
+	password = forms.CharField(widget=forms.PasswordInput())
+	confirm_password = forms.CharField(widget=forms.PasswordInput())
 	class Meta:
 		model = CustomUser
 		fields = [
