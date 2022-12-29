@@ -260,3 +260,14 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - print(instance.username, 'this user is being saved')
 - Testing: berhasil
 - Git commit
+
+### 9.7 Django Signals To Create User Profile - Part 7: Memindahkan signals ke file baru signals.py(5)
+
+- Pada app/accounts buat file baru: app/accounts/signals.py
+- Pindahkan semua codes signals dari models.py ke signals.py
+- Import modul dan model yang diperlukan
+- Pada try block, ganti CustomUser dengan user seperti di bawah ini:
+- profile = UserProfile.objects.get(CustomUser=instance)
+- profile = UserProfile.objects.get(user=instance)
+- Testing: berhasil (sebelumnya ada error karena CustomUser, seharusny user)
+- Git commit
