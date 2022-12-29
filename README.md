@@ -226,3 +226,10 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Buat user baru dari admin panel
 - Testing: user profile berhasil dibuat secara otomatis
 - Git commit
+
+### 9.3 Django Signals To Create User Profile - Part 3: Upadate User profile (1)
+
+- Tambahkan else pada: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
+- dan print('User profile is updated')
+- Testing: berhasil
+- Git commit 
