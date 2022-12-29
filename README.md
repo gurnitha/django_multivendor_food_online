@@ -302,3 +302,12 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - 19. Admin will receive the commision, then clear the cart and send emil to the customer (we have take care the order)
 - 20. At the same time, we will send email to the restauran that he got a new order
 - 21. Once the restaurant owner open the email, the transaction can be procceded: except or reject the order
+
+### 10.2 Membuat User registration path
+
+- modified:   README.md
+- new file:   app/accounts/urls.py (membuat path registeruser)
+- modified:   app/accounts/views.py (membuat registeruser method)
+- modified:   main/urls.py (include app.accounts/urls.py)
+- Testing: berhasil
+- Git commit
