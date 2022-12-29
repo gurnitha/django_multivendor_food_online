@@ -312,7 +312,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-## 10.3 Template Inheritance Base Html
+### 10.3 Template Inheritance Base Html
 
 - modified:   README.md
 - modified:   app/accounts/views.py (render html)
@@ -323,10 +323,16 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-## 10.4 User Registration Form Template
+### 10.4 User Registration Form Template
 
 - modified:   app/accounts/views.py (render accounts/registerUser.html)
 - new file:   templates/accounts/registerUser.html (membuat folder (accounts) dan file baru (registerUser.html) dan menambahkan template form register)
 - modified:   templates/base.html (mengembalikan file javascript dari footer)
 - Testing: berhasil
+- Git commit
+
+### 10.5 Menggunakan class Meta verbose_name to rename CustomUser to Users in admin panel
+
+- Tambahkan class Meta dan verbose_name = "User" pada CustomUser class
+- Testing: berhasil berubah dari 'Custom users' menjadi 'Users'
 - Git commit

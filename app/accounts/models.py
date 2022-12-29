@@ -120,6 +120,9 @@ class CustomUser(AbstractBaseUser):
     def __str__(self):
         return self.email
 
+    class Meta:
+         verbose_name = "User"
+
     def has_perm(self, perm, obj=None):
         return self.is_admin
 
