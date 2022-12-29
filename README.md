@@ -269,5 +269,6 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Pada try block, ganti CustomUser dengan user seperti di bawah ini:
 - profile = UserProfile.objects.get(CustomUser=instance)
 - profile = UserProfile.objects.get(user=instance)
+- Tambahkan ready() function pada app/accounts/apps.py agar signals bisa berfungsi
 - Testing: berhasil (sebelumnya ada error karena CustomUser, seharusny user)
 - Git commit
