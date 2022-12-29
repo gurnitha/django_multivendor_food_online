@@ -209,5 +209,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
+## 09.Django Signals To Create User Profile
 
- 
+### 9.1 Django Signals To Create User Profile - Part 1: basic, create and test signals
+
+- In app/accounts/models.py impor post_save and receiver
+- Gunakan dekorator @receiver(post_save, sender=CustomUser)
+- Buat mothod dengan 4 parameter: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
+- Testing: berhasil
+- Git commit
+
