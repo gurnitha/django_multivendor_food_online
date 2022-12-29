@@ -7,4 +7,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def registeruser(request):
-	return HttpResponse('Register user here ..')
+	return render(request, 'accounts/registerUser.html')

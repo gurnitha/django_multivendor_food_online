@@ -322,3 +322,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - new file:   templates/includes/navbar.html (include footer)
 - Testing: berhasil
 - Git commit
+
+## 10.4 User Registration Form Template
+
+- modified:   app/accounts/views.py (render accounts/registerUser.html)
+- new file:   templates/accounts/registerUser.html (membuat folder (accounts) dan file baru (registerUser.html) dan menambahkan template form register)
+- modified:   templates/base.html (mengembalikan file javascript dari footer)
+- Testing: berhasil
+- Git commit
