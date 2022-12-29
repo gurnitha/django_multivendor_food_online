@@ -1,3 +1,4 @@
+<!-- templates/accounts/registerUser.html -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -16,7 +17,7 @@
                         <hr>
                         <div id="restaurant-sets-holder">
                             <form class="form-fields-set foodbakery-dev-restaurant-form" method="post" action="register-select-package.html">
-                                <ul class="register-add-restaurant-tab-container restaurant-information-tab-container">
+                                <!-- <ul class="register-add-restaurant-tab-container restaurant-information-tab-container">
                                     <li>
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -85,7 +86,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                </ul>
+                                </ul> -->
+                                {{ form }}
                             </form>
                         </div>
                     </div>

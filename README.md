@@ -336,3 +336,12 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Tambahkan class Meta dan verbose_name = "User" pada CustomUser class
 - Testing: berhasil berubah dari 'Custom users' menjadi 'Users'
 - Git commit
+
+### 10.6.1 User Registration Form Implementation - Part 1: testing UserRegistrationForm
+
+- modified:   README.md
+- new file:   app/accounts/forms.py (membuat file baru forms.py dan buat UserRegistrationForm class)
+- modified:   app/accounts/views.py (load UserRegistrationForm)
+- modified:   templates/accounts/registerUser.html (load form)
+- Testing: berhasil
+- Git commit

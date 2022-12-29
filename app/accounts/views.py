@@ -4,7 +4,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# Locals
+from app.accounts.forms import UserRegistrationForm
 
 # Create your views here.
 def registeruser(request):
-	return render(request, 'accounts/registerUser.html')
+	form = UserRegistrationForm
+	context = {
+		'form': form,
+	}
+	return render(request, 'accounts/registerUser.html', context)
