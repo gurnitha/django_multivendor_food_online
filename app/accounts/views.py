@@ -9,8 +9,18 @@ from app.accounts.forms import UserRegistrationForm
 
 # Create your views here.
 def registeruser(request):
-	form = UserRegistrationForm
+	# Check if the request is POST or GET
+	
+	# if the request is post
+	if request.method == 'POST':
+		print(request.POST)
+
+	# if the request is GET
+	else:
+		form = UserRegistrationForm
+	
 	context = {
 		'form': form,
 	}
+	
 	return render(request, 'accounts/registerUser.html', context)

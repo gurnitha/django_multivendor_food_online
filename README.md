@@ -353,3 +353,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   templates/accounts/registerUser.html (loading form instan)
 - Testing: berhasil
 - Git commit
+
+### 10.6.3 User Registration Form Implementation - Part 3: Membuat basic user register logik pada views
+
+- modified:   README.md
+- modified:   app/accounts/views.py (membuat basik logik)
+- modified:   templates/accounts/registerUser.html (menambahkan csrf_token pada form)
+- Testing: berhasil merekam data dari form
+- Git commit
