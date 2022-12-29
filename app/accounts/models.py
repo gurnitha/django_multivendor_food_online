@@ -174,7 +174,7 @@ creating a profile instance as soon as the user is created.
 """
 
 # Django modules
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 
 """
@@ -222,6 +222,12 @@ def post_save_create_profile_receiver(sender, instance, created, **kwargs):
             UserProfile.objects.create(user=instance)
             print('Profile was not exist, but I created one')
         print('User is updated')    
+
+
+@receiver(pre_save, sender=CustomUser)
+def pre_save_create_profile_receiver(sender, instance, **kwargs):
+    print(instance.username, 'this user is being saved')
+
 
 '''Bellow is the way to connect with the receiver.
 But we will use @ (decocator), see above''' 

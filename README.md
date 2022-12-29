@@ -250,3 +250,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Gunakan try block
 - Testing: berhasil
 - Git commit
+
+### 9.6 Django Signals To Create User Profile - Part 6: Menggunakan pre_save signals untuk hindari masalah di atas(4)
+
+- Buat hal di bawah ini:
+- impor pre_save signals
+- @receiver(pre_save, sender=CustomUser)
+- def pre_save_create_profile_receiver(sender, instance, **kwargs):
+- print(instance.username, 'this user is being saved')
+- Testing: berhasil
+- Git commit
