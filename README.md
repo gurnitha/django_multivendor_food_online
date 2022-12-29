@@ -311,3 +311,14 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   main/urls.py (include app.accounts/urls.py)
 - Testing: berhasil
 - Git commit
+
+## 10.3 Template Inheritance Base Html
+
+- modified:   README.md
+- modified:   app/accounts/views.py (render html)
+- new file:   templates/base.html (template inheritance django)
+- modified:   templates/home.html (extends base.html to reder home page)
+- new file:   templates/includes/footer.html (include footer)
+- new file:   templates/includes/navbar.html (include footer)
+- Testing: berhasil
+- Git commit
