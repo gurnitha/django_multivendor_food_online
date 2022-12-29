@@ -362,7 +362,6 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil merekam data dari form
 - Git commit
 
-
 ### 10.6.4 User Registration Form Implementation - Part 4: Membuat user register logik pada views
 
 - modified:   app/accounts/forms.py (deleting phone_number field)
@@ -370,4 +369,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   app/accounts/views.py (Membuat user register logik pada views)
 - modified:   templates/accounts/registerUser.html (modifikasi form)
 - Testing: berhasil
+- Git commit
+
+### 10.6.5 User Registration Form Implementation - Part 5: Menambahkan role sebagai CUSTOMER pada user register logik pada views
+
+- modified:   README.md
+- modified:   app/accounts/views.py
+- Testing: berhasil menambahkan role sebagai CUSTOMER pada user register
 - Git commit
