@@ -43,7 +43,7 @@ def post_save_create_profile_receiver(sender, instance, created, **kwargs):
     print(created) # print something if user is created.
     if created:
         UserProfile.objects.create(user=instance)
-        print('User profile is created')
+        # print('User profile is created')
         ''' User profile is created.
         So now we have to create profile instance
         to be able to update User profile
@@ -61,13 +61,14 @@ def post_save_create_profile_receiver(sender, instance, created, **kwargs):
         except:
             # Create user profile if not exist
             UserProfile.objects.create(user=instance)
-            print('Profile was not exist, but I created one')
-        print('User is updated')    
+            # print('Profile was not exist, but I created one')
+        # print('User is updated')    
 
 
 @receiver(pre_save, sender=CustomUser)
 def pre_save_create_profile_receiver(sender, instance, **kwargs):
-    print(instance.username, 'this user is being saved')
+    pass
+    # print(instance.username, 'this user is being saved')
 
 
 '''Bellow is the way to connect with the receiver.

@@ -361,3 +361,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   templates/accounts/registerUser.html (menambahkan csrf_token pada form)
 - Testing: berhasil merekam data dari form
 - Git commit
+
+
+### 10.6.4 User Registration Form Implementation - Part 4: Membuat user register logik pada views
+
+- modified:   app/accounts/forms.py (deleting phone_number field)
+- modified:   app/accounts/signals.py (disable print for testing)
+- modified:   app/accounts/views.py (Membuat user register logik pada views)
+- modified:   templates/accounts/registerUser.html (modifikasi form)
+- Testing: berhasil
+- Git commit

@@ -14,5 +14,5 @@ class UserRegistrationForm(forms.ModelForm):
 		model = CustomUser
 		fields = [
 			'first_name', 'last_name', 
-			'username', 'email', 'phone_number', 'password'
+			'username', 'email', 'password'
 		]

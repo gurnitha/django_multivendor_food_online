@@ -3,6 +3,7 @@
 # Django modules
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import redirect
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
@@ -14,6 +15,12 @@ def registeruser(request):
 	# if the request is post
 	if request.method == 'POST':
 		print(request.POST)
+		form = UserRegistrationForm(request.POST)
+
+		# Check if the form is valid
+		if form.is_valid():
+			form.save()
+			return redirect(registeruser)
 
 	# if the request is GET
 	else:
