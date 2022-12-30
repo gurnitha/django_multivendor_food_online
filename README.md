@@ -387,10 +387,18 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 11.1 Hash The Password From Form - Part 1: Create user using create_method
+### 11.2 Hash The Password From Form - Part 2: Create user using create_method
 
 - modified:   README.md
 - modified:   app/accounts/models.py
 - modified:   app/accounts/views.py
 - Testing: Data pada form tetap tinggal setelah submit the form
 - Git commit
+
+### 11.3 Hash The Password From Form - Part 3: Cleaning data from the form after submitting
+
+- modified:   README.md
+- modified:   app/accounts/views.py (add this: return redirect(registeruser))
+- Testing: Berhasil
+- Git commit
+

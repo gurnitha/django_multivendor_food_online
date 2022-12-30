@@ -47,15 +47,16 @@ def registeruser(request):
 			username = form.cleaned_data['username']
 			email = form.cleaned_data['email']
 			password = form.cleaned_data['password']
-			user = CustomUser.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
-			# user = CustomUser.objects.create_user(
-			# 	first_name=first_name, 
-			# 	last_name=last_name, 
-			# 	username=username, 
-			# 	email=email, 
-			# 	password=password)
+			user = CustomUser.objects.create_user(
+				first_name=first_name, 
+				last_name=last_name, 
+				username=username, 
+				email=email, 
+				password=password)
 			user.role = CustomUser.CUSTOMER
 			user.save()
+			print('User is created')
+			return redirect(registeruser)
 
 	# if the request is GET
 	else:
