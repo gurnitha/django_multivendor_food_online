@@ -58,6 +58,11 @@ def registeruser(request):
 			print('User is created')
 			return redirect(registeruser)
 
+		else:
+			print('invalid form')
+			print(form.errors)
+
+
 	# if the request is GET
 	else:
 		form = UserRegistrationForm

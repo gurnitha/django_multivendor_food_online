@@ -402,3 +402,30 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: Berhasil
 - Git commit
 
+## 12. Django Field Errors And Non Field Errors
+
+### 12.1 Django Field Errors And Non Field Errors - Part 1: Showing field error in terminal using existing email and username
+
+FIELD ERROR
+
+In simple words, any errors that are associated with your model fields are called field errors.
+
+NONE FIELD ERROR
+
+These non field errors are the errors that are not associated with your model field, but they are associated
+with your form's clean method where you raise your own custom validation errors from the form level
+itself without attaching these fields into your model.
+So that's what we call the non field errors.
+
+The best example for this non field error is actually the confirm password.
+So in our case, if I type a different password in this password and confirm password fields, then
+this should actually give us an error saying password password do not match.
+
+So this password has to be same.
+Then we will be allowed to submit this form, otherwise we will get an error.
+So that kind of error is called the non field error.
+
+- modified:   README.md
+- modified:   app/accounts/views.py (add else print(form.errors))
+- Testing: berhasil
+- Git commit
