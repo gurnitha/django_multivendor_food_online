@@ -460,6 +460,6 @@ is a inbuilt function.
 
 - modified:   README.md
 - modified:   app/accounts/forms.py (add clean method)
-- modified:   templates/accounts/registerUser.html (<li style="color: red;">{{form.non_field_errors}}</li>)
+- modified:   templates/accounts/registerUser.html (showing error using this: form.non_field_errors)
 - Testing: berhasil
 - Git commit
