@@ -429,3 +429,10 @@ So that kind of error is called the non field error.
 - modified:   app/accounts/views.py (add else print(form.errors))
 - Testing: berhasil
 - Git commit
+
+### 12.2 Django Field Errors And Non Field Errors - Part 2: Showing field error in form using existing email and username
+
+- modified:   README.md
+- modified:   templates/accounts/registerUser.html (looping error)
+- Testing: berhasil
+- Git commit
