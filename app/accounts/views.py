@@ -17,14 +17,17 @@ def registeruser(request):
 	if request.method == 'POST':
 		print(request.POST)
 		form = UserRegistrationForm(request.POST)
-
 		# Check if the form is valid
 		if form.is_valid():
+			# Clean the data
+			password = form.cleaned_data['password']
 			''' If form is valid, the submited 
 			data is ready to be save,
 			but do not save it yet.
 			Assign the data to the user '''
 			user = form.save(commit=False)
+			# Store passward in hash format
+			user.set_password(password)
 			# Add role to the user
 			user.role = CustomUser.CUSTOMER
 			user.save()

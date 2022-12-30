@@ -377,3 +377,12 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   app/accounts/views.py
 - Testing: berhasil menambahkan role sebagai CUSTOMER pada user register
 - Git commit
+
+## 11. Hash The Password From Form
+
+### 11.1 Hash The Password From Form - Part 1: Hash password from the views
+
+- modified:   README.md
+- modified:   app/accounts/views.py (clean data and store password in has format)
+- Testing: berhasil
+- Git commit
