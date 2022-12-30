@@ -386,3 +386,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - modified:   app/accounts/views.py (clean data and store password in has format)
 - Testing: berhasil
 - Git commit
+
+### 11.1 Hash The Password From Form - Part 1: Create user using create_method
+
+- modified:   README.md
+- modified:   app/accounts/models.py
+- modified:   app/accounts/views.py
+- Testing: Data pada form tetap tinggal setelah submit the form
+- Git commit
