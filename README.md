@@ -492,3 +492,10 @@ will be available in all of your HTML files.
 - new file:   templates/includes/alert.html (pindahkan message codes dari register)
 - Testing: berhasil
 - Git commit
+
+### 13.3 Django Messages - Part 3: Menambahkan close button page alert message
+
+- modified:   README.md
+- modified:   templates/includes/alert.html
+- Testing: berhasil
+- Git commit
