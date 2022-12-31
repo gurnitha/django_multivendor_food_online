@@ -463,3 +463,24 @@ is a inbuilt function.
 - modified:   templates/accounts/registerUser.html (showing error using this: form.non_field_errors)
 - Testing: berhasil
 - Git commit
+
+## 13. Django Messages
+
+We need to actually check if we have a message or not message
+If messages.
+If messages and we'll be wondering how this messages is available in this register user
+dot HTML because if you see this view we are not passing anything except form to this HTML.
+But still we are able to access these messages. So that because of this context processors
+in the settings.py file (inside the TEMPLATES).
+
+So this context processor is something. It's kind of a function.
+And when you write or when you return something inside the context processor, those module
+will be available in all of your HTML files.
+
+### 13.1 Django Messages - Part 1: Setup django messages in views and register page
+
+- modified:   README.md
+- modified:   app/accounts/views.py (setup django messages)
+- modified:   templates/accounts/registerUser.html (loop messages)
+- Testing: berhasil
+- Git commit

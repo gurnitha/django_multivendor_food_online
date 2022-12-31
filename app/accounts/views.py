@@ -4,6 +4,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.contrib import messages
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
@@ -55,7 +56,8 @@ def registeruser(request):
 				password=password)
 			user.role = CustomUser.CUSTOMER
 			user.save()
-			print('User is created')
+			messages.success(request, 'Your account has been registered sucessfully!')
+			# print('User is created')
 			return redirect(registeruser)
 
 		else:
