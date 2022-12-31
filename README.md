@@ -681,3 +681,11 @@ And if your farm has any files, then you should receive it like this.
 - modified:   templates/includes/navbar.html (add link to login)
 - Testing: berhasil
 - Git commit
+
+### 07.6.2 Login Logout Feature - Add logik to logout method
+
+- modified:   README.md
+- modified:   app/accounts/views.py (menambahkan logik pada logout method)
+- modified:   templates/includes/navbar.html (add link)
+- Testing: berhasil, tetapi django message tidak muncul
+- Git commit

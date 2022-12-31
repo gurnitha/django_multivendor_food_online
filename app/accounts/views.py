@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages, auth
+from django.contrib.auth import logout
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
@@ -139,8 +140,12 @@ def login(request):
 
 	return render(request, 'app/accounts/login.html')
 
+
+# Logout: Customer or Vendor
 def logout(request):
-	return render(request, 'app/accounts/logout.html')
+	auth.logout(request)
+	messages.info(request, 'You are logged out. Login again?')
+	return redirect('accounts:login')
 
 def dashboard(request):
 	return render(request, 'app/accounts/dashboard.html')
