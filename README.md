@@ -128,25 +128,25 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 
 - Modified nama app from name='accounts' to name='app.accounts'
 
-## 05 Membuat Custom User
+### 3. Membuat Custom User
 
-### 5.1 Membuat Custom User - Part 1: basics
+### 3.1 Membuat Custom User - Part 1: basics
 
 - Membuat class UserManager and CustomUser
 
-### 5.2 Membuat Custom User - Part 2: create user
+### 3.2 Membuat Custom User - Part 2: create user
 
 - Membuat def create_user method
 
-### 5.3 Membuat Custom User - Part 3: create superuser
+### 3.3 Membuat Custom User - Part 3: create superuser
 
 - Membuat def create_superuser method
 
-### 5.4 Membuat Custom User - Part 4: create CustomUser class
+### 3.4 Membuat Custom User - Part 4: create CustomUser class
 
 - Membuat CustomUser class
 
-### 5.5 Membuat Custom User - Part 5: register CustomeUser to settings.py
+### 3.5 Membuat Custom User - Part 5: register CustomeUser to settings.py
 
 - Register CustomUser model pada settings.py
 - We need to tell Django that we are not using its default user model anymore.
@@ -156,7 +156,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - CustomUser model membuat error karena di dalam database sudah ada tabel auth_user
 - Git commit
 
-### 5.6 Membuat Custom User - Part 6: Menghilangkan error
+### 3.6 Membuat Custom User - Part 6: Menghilangkan error
 
 - Penyebab error: membuat tabel CustomUser sedangkan tabel auth_user sudah ada di dalam db
 - Menghilangkan error: hapus file migrasi dan hapus database dan buat database baru
@@ -166,15 +166,15 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: customuser model tidak tampak pada admin panel
 - Git commit
 
-### 5.7 Membuat Custom User - Part 7: Register CustomUser model pada admin
+### 3.7 Membuat Custom User - Part 7: Register CustomUser model pada admin
 
 - Register CustomUser model pada admin
 - Testing
 - Git commit
 
-## 06. Membuat Password tidak bisa diedit
+## 4. Membuat Password tidak bisa diedit
 
-### 6.1. Membuat Password tidak bisa diedit - Part 1: Membuat CustomUserAdmin class
+### 4.1. Membuat Password tidak bisa diedit - Part 1: Membuat CustomUserAdmin class
 
 - Membuat CustomUserAdmin class
 - Gunakan module UserAdmin sebagai parameter untuk modifikasi tampilan pada admin panel
@@ -182,13 +182,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing
 - Git commit
 
-### 6.2. Membuat Password tidak bisa diedit - Part 2: Kustomais tampilan pada admin panel
+### 4.2. Membuat Password tidak bisa diedit - Part 2: Kustomais tampilan pada admin panel
 
 - Membuat filter pada fields dari CustomUserAdmin class
 - Testing
 - Git commit
 
-## 07. Membuat UserProfile model
+### 5. Membuat UserProfile model
 
 - Membuat UserProfile model
 - Menginstal modul Pillow untuk gambar
@@ -197,7 +197,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: link gambar tidak berfungsi karena media file belum disetup
 - Git commit
 
-## 08. Mensetup media file
+### 6. Mensetup media file
 
 - Menghapus users folder
 - Membuat konfigurasi media file pada settings.py
@@ -209,9 +209,9 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-## 09.Django Signals To Create User Profile
+### 7.Django Signals To Create User Profile
 
-### 9.1 Django Signals To Create User Profile - Part 1: basic, create and test signals
+### 7.1 Django Signals To Create User Profile - Part 1: basic, create and test signals
 
 - In app/accounts/models.py impor post_save and receiver
 - Gunakan dekorator @receiver(post_save, sender=CustomUser)
@@ -219,7 +219,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 9.2 Django Signals To Create User Profile - Part 2: Membuat user prifile dari admin panel secara otomatis
+### 7.2 Django Signals To Create User Profile - Part 2: Membuat user prifile dari admin panel secara otomatis
 
 - Pada : def post_save_create_profile_receiver(sender, instance, created, **kwargs): 
 - tambahkan ini: UserProfile.objects.create(user=instance)
@@ -227,14 +227,14 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: user profile berhasil dibuat secara otomatis
 - Git commit
 
-### 9.3 Django Signals To Create User Profile - Part 3: Upadate User profile (1)
+### 7.3 Django Signals To Create User Profile - Part 3: Upadate User profile (1)
 
 - Tambahkan else pada: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
 - dan print('User profile is updated')
 - Testing: berhasil
 - Git commit 
 
-### 9.4 Django Signals To Create User Profile - Part 4: Meng-update user yang profilenya telah dihapus (2)
+### 7.4 Django Signals To Create User Profile - Part 4: Meng-update user yang profilenya telah dihapus (2)
 
 - Update: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
 - dengan yang di bawah ini:
@@ -244,14 +244,14 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Tesing: hapus User profile dan update user yang sama, hasil error
 - Git commit
 
-### 9.5 Django Signals To Create User Profile - Part 5: Menggunakan try block untuk atasi masalah di atas(3)
+### 7.5 Django Signals To Create User Profile - Part 5: Menggunakan try block untuk atasi masalah di atas(3)
 
 - Update: def post_save_create_profile_receiver(sender, instance, created, **kwargs):
 - Gunakan try block
 - Testing: berhasil
 - Git commit
 
-### 9.6 Django Signals To Create User Profile - Part 6: Menggunakan pre_save signals untuk hindari masalah di atas(4)
+### 7.6 Django Signals To Create User Profile - Part 6: Menggunakan pre_save signals untuk hindari masalah di atas(4)
 
 - Buat hal di bawah ini:
 - impor pre_save signals
@@ -261,7 +261,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 9.7 Django Signals To Create User Profile - Part 7: Memindahkan signals ke file baru signals.py(5)
+### 7.7 Django Signals To Create User Profile - Part 7: Memindahkan signals ke file baru signals.py(5)
 
 - Pada app/accounts buat file baru: app/accounts/signals.py
 - Pindahkan semua codes signals dari models.py ke signals.py
@@ -273,10 +273,9 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil (sebelumnya ada error karena CustomUser, seharusny user)
 - Git commit
 
+## 05. User registrations, Django messages and error
 
-## 10. User registrations, Django messages and error
-
-### 10.1 Foodonline Flowchart: penjelasan flow of chart (no codes have made)
+### 1 Foodonline Flowchart: penjelasan flow of chart (no codes have made)
 
 - Penjelasan flow dari cara kerja Multi Vendor Food Online
 - 1. In comming random user (registered or not register user)
@@ -303,7 +302,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - 20. At the same time, we will send email to the restauran that he got a new order
 - 21. Once the restaurant owner open the email, the transaction can be procceded: except or reject the order
 
-### 10.2 Membuat User registration path
+### 2 Membuat User registration path
 
 - modified:   README.md
 - new file:   app/accounts/urls.py (membuat path registeruser)
@@ -312,7 +311,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.3 Template Inheritance Base Html
+### 3 Template Inheritance Base Html
 
 - modified:   README.md
 - modified:   app/accounts/views.py (render html)
@@ -323,7 +322,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.4 User Registration Form Template
+### 4 User Registration Form Template
 
 - modified:   app/accounts/views.py (render accounts/registerUser.html)
 - new file:   templates/accounts/registerUser.html (membuat folder (accounts) dan file baru (registerUser.html) dan menambahkan template form register)
@@ -331,13 +330,13 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.5 Menggunakan class Meta verbose_name to rename CustomUser to Users in admin panel
+### 5 Menggunakan class Meta verbose_name to rename CustomUser to Users in admin panel
 
 - Tambahkan class Meta dan verbose_name = "User" pada CustomUser class
 - Testing: berhasil berubah dari 'Custom users' menjadi 'Users'
 - Git commit
 
-### 10.6.1 User Registration Form Implementation - Part 1: testing UserRegistrationForm
+### 5.1 User Registration Form Implementation - Part 1: testing UserRegistrationForm
 
 - modified:   README.md
 - new file:   app/accounts/forms.py (membuat file baru forms.py dan buat UserRegistrationForm class)
@@ -346,7 +345,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.6.2 User Registration Form Implementation - Part 2: Loading form instan pada RegisterUser form
+### 5.2 User Registration Form Implementation - Part 2: Loading form instan pada RegisterUser form
 
 - modified:   app/accounts/forms.py (menambahkan password dan confirm_password field)
 - modified:   app/accounts/urls.py (koreksi nama path dari registeruer menjadi registeruser)
@@ -354,7 +353,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.6.3 User Registration Form Implementation - Part 3: Membuat basic user register logik pada views
+### 5.3 User Registration Form Implementation - Part 3: Membuat basic user register logik pada views
 
 - modified:   README.md
 - modified:   app/accounts/views.py (membuat basik logik)
@@ -362,7 +361,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil merekam data dari form
 - Git commit
 
-### 10.6.4 User Registration Form Implementation - Part 4: Membuat user register logik pada views
+### 5.4 User Registration Form Implementation - Part 4: Membuat user register logik pada views
 
 - modified:   app/accounts/forms.py (deleting phone_number field)
 - modified:   app/accounts/signals.py (disable print for testing)
@@ -371,23 +370,23 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil
 - Git commit
 
-### 10.6.5 User Registration Form Implementation - Part 5: Menambahkan role sebagai CUSTOMER pada user register logik pada views
+### 5.5 User Registration Form Implementation - Part 5: Menambahkan role sebagai CUSTOMER pada user register logik pada views
 
 - modified:   README.md
 - modified:   app/accounts/views.py
 - Testing: berhasil menambahkan role sebagai CUSTOMER pada user register
 - Git commit
 
-## 11. Hash The Password From Form
+### 6. Hash The Password From Form
 
-### 11.1 Hash The Password From Form - Part 1: Hash password from the views
+### 6.1 Hash The Password From Form - Part 1: Hash password from the views
 
 - modified:   README.md
 - modified:   app/accounts/views.py (clean data and store password in has format)
 - Testing: berhasil
 - Git commit
 
-### 11.2 Hash The Password From Form - Part 2: Create user using create_method
+### 6.2 Hash The Password From Form - Part 2: Create user using create_method
 
 - modified:   README.md
 - modified:   app/accounts/models.py
@@ -395,16 +394,16 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: Data pada form tetap tinggal setelah submit the form
 - Git commit
 
-### 11.3 Hash The Password From Form - Part 3: Cleaning data from the form after submitting
+### 6.3 Hash The Password From Form - Part 3: Cleaning data from the form after submitting
 
 - modified:   README.md
 - modified:   app/accounts/views.py (add this: return redirect(registeruser))
 - Testing: Berhasil
 - Git commit
 
-## 12. Django Field Errors And Non Field Errors
+### 7. Django Field Errors And Non Field Errors
 
-### 12.1 Django Field Errors And Non Field Errors - Part 1: Showing field error in terminal using existing email and username
+### 7.1 Django Field Errors And Non Field Errors - Part 1: Showing field error in terminal using existing email and username
 
 FIELD ERROR
 
@@ -430,14 +429,14 @@ So that kind of error is called the non field error.
 - Testing: berhasil
 - Git commit
 
-### 12.2 Django Field Errors And Non Field Errors - Part 2: Showing field error in form using existing email and username
+### 7.2 Django Field Errors And Non Field Errors - Part 2: Showing field error in form using existing email and username
 
 - modified:   README.md
 - modified:   templates/accounts/registerUser.html (looping error)
 - Testing: berhasil
 - Git commit
 
-### 12.3 Django Field Errors And Non Field Errors - Part 3: Showing NONE field errors 
+### 7.3 Django Field Errors And Non Field Errors - Part 3: Showing NONE field errors 
 
 So field error actually should be raised from the form level.
 If password is not equal to confirm password then raise an error.
@@ -464,7 +463,7 @@ is a inbuilt function.
 - Testing: berhasil
 - Git commit
 
-## 13. Django Messages
+### 8. Django Messages
 
 We need to actually check if we have a message or not message
 If messages.
@@ -477,7 +476,7 @@ So this context processor is something. It's kind of a function.
 And when you write or when you return something inside the context processor, those module
 will be available in all of your HTML files.
 
-### 13.1 Django Messages - Part 1: Setup django messages in views and register page
+### 8.1 Django Messages - Part 1: Setup django messages in views and register page
 
 - modified:   README.md
 - modified:   app/accounts/views.py (setup django messages)
@@ -485,7 +484,7 @@ will be available in all of your HTML files.
 - Testing: berhasil
 - Git commit
 
-### 13.2 Django Messages - Part 2: Using template inheritance (include) to show messages
+### 8.2 Django Messages - Part 2: Using template inheritance (include) to show messages
 
 - modified:   README.md
 - modified:   templates/accounts/registerUser.html (include alert file)
@@ -493,16 +492,16 @@ will be available in all of your HTML files.
 - Testing: berhasil
 - Git commit
 
-### 13.3 Django Messages - Part 3: Menambahkan close button page alert message
+### 8.3 Django Messages - Part 3: Menambahkan close button page alert message
 
 - modified:   README.md
 - modified:   templates/includes/alert.html
 - Testing: berhasil
 - Git commit
 
-## 14. Messages Animation
+### 9. Messages Animation
 
-### 14.1 Messages Animation - Part 1: Animate alert message dengan CSS
+### 9.1 Messages Animation - Part 1: Animate alert message dengan CSS
 
 - modified:   README.md
 - modified:   templates/base.html (tambahakan custom css)
@@ -511,14 +510,14 @@ will be available in all of your HTML files.
 - Testing: berhasil
 - Git commit
 
-### 14.2 Messages Animation - Part 2: Menggunakan Django message tag
+### 9.2 Messages Animation - Part 2: Menggunakan Django message tag
 
 - modified:   main/settings.py (menambahkan django message tag)
 - modified:   templates/includes/alert.html (modifikasi kelas css)
 - Testing: berhasil
 - Git commit
 
-## 15. Frontend Tweaks
+## 10. Frontend Tweaks
 
 - modified:   README.md
 - modified:   app/accounts/urls.py (menambahkan app_name)
