@@ -644,3 +644,12 @@ And if your farm has any files, then you should receive it like this.
 - new file:   media/vendor/license/license-sample-image.jpg
 - Testing: berhasil
 - Git commit
+
+### 07.4 Vendor Admin Config
+
+- modified:   README.md
+- modified:   app/accounts/views.py
+- modified:   app/vendors/admin.py
+- new file:   media/vendor/license/license-sample-image.jpg
+- Testing: berhasil
+- Git commit
