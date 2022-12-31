@@ -562,3 +562,12 @@ will be available in all of your HTML files.
 - Testing: berhasil
 - Git commit
 
+### 07.2 Vendor Registration Template
+
+- modified:   README.md
+- modified:   app/accounts/urls.py (membuat path untuk registervendor)
+- modified:   app/accounts/views.py (membuat registervendor method)
+- renamed:    templates/accounts/registerUser.html -> templates/app/accounts/registerUser.html
+- new file:   templates/app/accounts/registerVendor.html (template sementara)
+- Testing: berhasil
+- Git commit
