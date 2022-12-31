@@ -545,3 +545,10 @@ will be available in all of your HTML files.
 - new file:   app/vendors/tests.py
 - new file:   app/vendors/views.py
 
+### 07.2. Register vendors app to project
+
+- modified:   README.md
+- modified:   app/vendors/apps.py (modified app name)
+- modified:   main/settings.py (register vendors app)
+- Testing: berhasil
+- Git commit
