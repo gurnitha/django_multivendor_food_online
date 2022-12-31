@@ -484,3 +484,11 @@ will be available in all of your HTML files.
 - modified:   templates/accounts/registerUser.html (loop messages)
 - Testing: berhasil
 - Git commit
+
+### 13.2 Django Messages - Part 2: Using template inheritance (include) to show messages
+
+- modified:   README.md
+- modified:   templates/accounts/registerUser.html (include alert file)
+- new file:   templates/includes/alert.html (pindahkan message codes dari register)
+- Testing: berhasil
+- Git commit
