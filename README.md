@@ -534,7 +534,7 @@ will be available in all of your HTML files.
 
 ## 07. Vendor regisistration and authentication functionalities
 
-### 07.1. Create vendors app
+### 07.1.1 Create vendors app
 
 - modified:   README.md
 - new file:   app/vendors/__init__.py
@@ -545,7 +545,7 @@ will be available in all of your HTML files.
 - new file:   app/vendors/tests.py
 - new file:   app/vendors/views.py
 
-### 07.2. Register vendors app to project
+### 07.1.2 Register vendors app to project
 
 - modified:   README.md
 - modified:   app/vendors/apps.py (modified app name)
@@ -553,7 +553,7 @@ will be available in all of your HTML files.
 - Testing: berhasil
 - Git commit
 
-### 07.3. Create Vendor model dan jalankan migrasi
+### 07.1.3 Create Vendor model dan jalankan migrasi
 
 - new file:   app/accounts/migrations/0003_alter_customuser_options.py
 - modified:   app/vendors/admin.py (register Vendor)
@@ -561,3 +561,4 @@ will be available in all of your HTML files.
 - modified:   app/vendors/models.py (create Vendor model)
 - Testing: berhasil
 - Git commit
+
