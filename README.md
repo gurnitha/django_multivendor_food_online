@@ -653,3 +653,16 @@ And if your farm has any files, then you should receive it like this.
 - new file:   media/vendor/license/license-sample-image.jpg
 - Testing: berhasil
 - Git commit
+
+### 07.5.1 Login, Logout, Dashboard pages basic setup
+
+- modified:   README.md
+- modified:   app/accounts/urls.py (membuat path untuk login, logout, dashboard)
+- modified:   app/accounts/views.py (membuat login, logout, dashboar method)
+- new file:   templates/app/accounts/dashboard.html (membuat basic page)
+- new file:   templates/app/accounts/login.html (membuat basic page)
+- new file:   templates/app/accounts/logout.html (membuat basic page)
+- Testing: berhasil
+- Git commit
+
+

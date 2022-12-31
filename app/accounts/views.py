@@ -120,3 +120,13 @@ def registervendor(request):
 		'vreg_form': vreg_form
 	}
 	return render(request, 'app/accounts/registerVendor.html', context)
+
+
+def login(request):
+	return render(request, 'app/accounts/login.html')
+
+def logout(request):
+	return render(request, 'app/accounts/logout.html')
+
+def dashboard(request):
+	return render(request, 'app/accounts/dashboard.html')
