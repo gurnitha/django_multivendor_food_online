@@ -4,7 +4,7 @@ Membuat multivendor ecommerce food online menggunakan django
 Link to course:
 https://www.udemy.com/course/python-django-real-world-project-multi-vendor-restaurant/learn/lecture
 
-## 01. Intro
+## 01. Introduction
 
 ## 02. Getting started
 
@@ -73,7 +73,11 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing
 - Git commit
 
-## 03. Setting up PostgreSQL db
+## 03. Purchase and implement template
+
+- Download template
+
+## 04. Setting up PostgreSQL db
 
 ### 1. Membuat konfigurasi db
 
@@ -115,7 +119,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - 'PASSWORD': config('DB_PASSWORD'),
 - 'HOST': config('DB_HOST')
 
-## 04. Custom user model, Media files, dan Django signals
+## 05. Custom user model, Media files, dan Django signals
 
 ### 1. Membuat app baru app/accounts
 
@@ -273,7 +277,7 @@ https://www.udemy.com/course/python-django-real-world-project-multi-vendor-resta
 - Testing: berhasil (sebelumnya ada error karena CustomUser, seharusny user)
 - Git commit
 
-## 05. User registrations, Django messages and error
+## 06. User registrations, Django messages and error
 
 ### 1 Foodonline Flowchart: penjelasan flow of chart (no codes have made)
 
@@ -527,3 +531,17 @@ will be available in all of your HTML files.
 - modified:   templates/includes/navbar.html (menambahkan home link)
 - Testing: berhasil
 - Git commit
+
+## 07. Vendor regisistration and authentication functionalities
+
+### 07.1. Create vendors app
+
+- modified:   README.md
+- new file:   app/vendors/__init__.py
+- new file:   app/vendors/admin.py
+- new file:   app/vendors/apps.py
+- new file:   app/vendors/migrations/__init__.py
+- new file:   app/vendors/models.py
+- new file:   app/vendors/tests.py
+- new file:   app/vendors/views.py
+
