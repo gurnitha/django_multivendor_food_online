@@ -571,3 +571,56 @@ will be available in all of your HTML files.
 - new file:   templates/app/accounts/registerVendor.html (template sementara)
 - Testing: berhasil
 - Git commit
+
+### 07.3.1 Vendor Registration Feature
+
+Steps:
+
+1. Create a VendorForm model for vendor inside the vendors app
+
+So inside the vendor app, we'll create a new file called forms.py
+And here we need to import the form froms Django.
+This will inherit from forms the model form.
+
+Inside the VendorForm class, create Meta class that use Vendor as the model.
+We need to create 2 fields: vendor_name, and vendor_license.
+
+Other fields that is needed, will be automatically get captured.
+We only want these two things: Vendor name and vendor license.
+So yeah, that's that's it for this winter form.
+
+2. Combining the VendorForm and UserForm
+
+We need to actually combine these two forms in order to print
+the fields of users as well as vendor in this page.
+So this first name, last name, email address, everything will come from the user model, user form.
+And we also want to add the the vendor form also.
+
+Bellow, what is all about.
+
+def registervendor(request):
+	ureg_form = UserRegistrationForm # ureg_form is for UserForm in short
+	vreg_form = VendorRegistrationForm # vreg_form is for VendorForm in short
+	context = {
+		'ureg_form': ureg_form,
+		'vreg_form': vreg_form
+	}
+	return render(request, 'app/accounts/registerVendor.html', context)
+
+NOTE:
+
+You should keep in mind that whenever you use input file type, or if you want to upload
+any file from the form, you need to actually set an encoding type attribute to the form,
+as seen here: enctype="multipart/form-data"
+
+So this one you should always put whenever you want to receive any files from the form.
+Otherwise, your files will not get uploaded into the form.
+
+- modified:   README.md
+- modified:   app/accounts/views.py (membuat registervendor method dan di register user rename form to ureg_form)
+- new file:   app/vendors/forms.py (membuat form model)
+- modified:   templates/app/accounts/registerUser.html (modified)
+- modified:   templates/app/accounts/registerVendor.html (modified)
+- modified:   templates/includes/navbar.html (menambahkan link)
+- Testing: berhasil
+- Git commit

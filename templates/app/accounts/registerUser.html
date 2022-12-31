@@ -27,24 +27,24 @@
                                                     <li>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="field-holder">
-                                                                <label>First name</label>{{form.first_name}}
+                                                                <label>First name</label>{{ureg_form.first_name}}
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="field-holder">
-                                                                <label>Last name</label>{{form.last_name}}
+                                                                <label>Last name</label>{{ureg_form.last_name}}
                                                             </div>
                                                         </div>
                                                         
                                                         
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="field-holder">
-                                                                <label>Email Address</label>{{form.email}}
+                                                                <label>Email Address</label>{{ureg_form.email}}
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="field-holder">
-                                                                <label>Username</label>{{form.username}}
+                                                                <label>Username</label>{{ureg_form.username}}
                                                             </div>
                                                         </div>
                                                     </li>
@@ -53,13 +53,13 @@
                                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                             <div class="field-holder">
                                                                 <label>Password</label>
-                                                                {{form.password}}
+                                                                {{ureg_form.password}}
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                             <div class="field-holder">
                                                                 <label>Confirm Password</label>
-                                                                {{form.confirm_password}}
+                                                                {{ureg_form.confirm_password}}
                                                             </div>
                                                         </div>
                                                     </li>
@@ -80,7 +80,7 @@
                                             {% endif %}
                                         {% endfor %}
 
-                                        <li style="color: red;">{{form.non_field_errors}}</li>
+                                        <li style="color: red;">{{ureg_form.non_field_errors}}</li>
                                     </ul>
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

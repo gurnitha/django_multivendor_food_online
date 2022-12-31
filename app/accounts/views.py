@@ -9,6 +9,7 @@ from django.contrib import messages
 # Locals
 from app.accounts.forms import UserRegistrationForm
 from app.accounts.models import CustomUser
+from app.vendors.forms import VendorRegistrationForm
 
 # Create your views here.
 
@@ -20,19 +21,19 @@ def registeruser(request):
 	# if the request is post
 	if request.method == 'POST':
 		print(request.POST)
-		form = UserRegistrationForm(request.POST)
+		ureg_form = UserRegistrationForm(request.POST)
 
 		# CREATE USER USING THE FORM
 
-		# # Check if the form is valid
-		# if form.is_valid():
+		# # Check if the ureg_form is valid
+		# if ureg_form.is_valid():
 		# 	# Clean the data
-		# 	password = form.cleaned_data['password']
-		# 	''' If form is valid, the submited 
+		# 	password = ureg_form.cleaned_data['password']
+		# 	''' If ureg_form is valid, the submited 
 		# 	data is ready to be save,
 		# 	but do not save it yet.
 		# 	Assign the data to the user '''
-		# 	user = form.save(commit=False)
+		# 	user = ureg_form.save(commit=False)
 		# 	# Store passward in hash format
 		# 	user.set_password(password)
 		# 	# Add role to the user
@@ -42,15 +43,15 @@ def registeruser(request):
 
 		# CREATE USER USING create_user METHOD
 		
-		if form.is_valid():
+		if ureg_form.is_valid():
 			'''Get the first_name, last_name, username,
 			email, password form the create_user method
 			and assign the role as CUSTOMER'''
-			first_name = form.cleaned_data['first_name']
-			last_name = form.cleaned_data['last_name']
-			username = form.cleaned_data['username']
-			email = form.cleaned_data['email']
-			password = form.cleaned_data['password']
+			first_name = ureg_form.cleaned_data['first_name']
+			last_name = ureg_form.cleaned_data['last_name']
+			username = ureg_form.cleaned_data['username']
+			email = ureg_form.cleaned_data['email']
+			password = ureg_form.cleaned_data['password']
 			user = CustomUser.objects.create_user(
 				first_name=first_name, 
 				last_name=last_name, 
@@ -61,24 +62,31 @@ def registeruser(request):
 			user.save()
 			messages.success(request, 'Your account has been registered sucessfully!')
 			# print('User is created')
-			return redirect(registeruser)
+			return redirect('accounts:registeruser')
 
 		else:
-			print('invalid form')
-			print(form.errors)
+			print('invalid ureg_form')
+			print(ureg_form.errors)
 
 
 	# if the request is GET
 	else:
-		form = UserRegistrationForm
+		ureg_form = UserRegistrationForm
 	
 	context = {
-		'form': form,
+		'ureg_form': ureg_form,
 	}
 	
+	# return render(request, 'accounts/registerUser.html', context)
 	return render(request, 'app/accounts/registerUser.html', context)
 
 
 # Vendor: register
 def registervendor(request):
-	return render(request, 'app/accounts/registerVendor.html')
+	ureg_form = UserRegistrationForm # ureg_form is for UserForm in short
+	vreg_form = VendorRegistrationForm # vreg_form is for VendorForm in short
+	context = {
+		'ureg_form': ureg_form,
+		'vreg_form': vreg_form
+	}
+	return render(request, 'app/accounts/registerVendor.html', context)
