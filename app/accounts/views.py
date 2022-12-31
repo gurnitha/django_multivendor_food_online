@@ -8,7 +8,7 @@ from django.contrib import messages
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
-from app.accounts.models import CustomUser
+from app.accounts.models import CustomUser, UserProfile
 from app.vendors.forms import VendorRegistrationForm
 
 # Create your views here.
@@ -90,14 +90,23 @@ def registervendor(request):
 		vreg_form = VendorRegistrationForm(request.POST, request.FILES)
 		# Check if form is valid
 		if ureg_form.is_valid() and vreg_form.is_valid():
-			first_name = form.cleaned_data['first_name']
-			last_name = form.cleaned_data['last_name']
-			username = form.cleaned_data['username']
-			email = form.cleaned_data['email']
-			password = form.cleaned_data['password']
+			first_name = ureg_form.cleaned_data['first_name']
+			last_name = ureg_form.cleaned_data['last_name']
+			username = ureg_form.cleaned_data['username']
+			email = ureg_form.cleaned_data['email']
+			password = ureg_form.cleaned_data['password']
 			user = CustomUser.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
 			user.role = CustomUser.VENDOR
 			user.save()
+			# Do not save this user to vreg_form
+			vendor = vreg_form.save(commit=False)
+			vendor.user = user 
+			# Get user profile from CustomUser which defined in signals
+			user_profile = UserProfile.objects.get(user=user)
+			vendor.user_profile = user_profile
+			vendor.save()
+			messages.success(request, 'Your account has been registered sucessfully! Please wait for the approval.')
+			return redirect('accounts:registervendor')
 		else:
 			print('invalid ureg_form and vreg_form')
 			print(ureg_form.errors)

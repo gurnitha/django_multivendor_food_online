@@ -636,3 +636,11 @@ And if your farm has any files, then you should receive it like this.
 - modified:   app/accounts/views.py
 - Testing: belum bisa di test
 - Git commit
+
+### 07.3.3 Kombinasi data kustomer (user) dan vendor - create vendor
+
+- modified:   README.md
+- modified:   app/accounts/views.py
+- new file:   media/vendor/license/license-sample-image.jpg
+- Testing: berhasil
+- Git commit
