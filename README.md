@@ -552,3 +552,12 @@ will be available in all of your HTML files.
 - modified:   main/settings.py (register vendors app)
 - Testing: berhasil
 - Git commit
+
+### 07.3. Create Vendor model dan jalankan migrasi
+
+- new file:   app/accounts/migrations/0003_alter_customuser_options.py
+- modified:   app/vendors/admin.py (register Vendor)
+- new file:   app/vendors/migrations/0001_initial.py
+- modified:   app/vendors/models.py (create Vendor model)
+- Testing: berhasil
+- Git commit
