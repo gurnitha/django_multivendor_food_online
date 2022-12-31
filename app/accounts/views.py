@@ -11,7 +11,9 @@ from app.accounts.forms import UserRegistrationForm
 from app.accounts.models import CustomUser
 
 # Create your views here.
+# def registeruser(request):
 def registeruser(request):
+
 	# Check if the request is POST or GET
 	
 	# if the request is post

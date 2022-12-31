@@ -517,3 +517,14 @@ will be available in all of your HTML files.
 - modified:   templates/includes/alert.html (modifikasi kelas css)
 - Testing: berhasil
 - Git commit
+
+## 15. Frontend Tweaks
+
+- modified:   README.md
+- modified:   app/accounts/urls.py (menambahkan app_name)
+- modified:   app/accounts/views.py 
+- modified:   templates/accounts/registerUser.html (menambahkan app_name pada link)
+- modified:   templates/home.html (menambahkan inline css)
+- modified:   templates/includes/navbar.html (menambahkan home link)
+- Testing: berhasil
+- Git commit
