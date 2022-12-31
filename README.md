@@ -499,3 +499,14 @@ will be available in all of your HTML files.
 - modified:   templates/includes/alert.html
 - Testing: berhasil
 - Git commit
+
+## 14. Messages Animation
+
+### 14.1 Messages Animation - Part 1: Animate alert message dengan CSS
+
+- modified:   README.md
+- modified:   templates/base.html (tambahakan custom css)
+- modified:   templates/includes/alert.html (tambahkan class animasi)
+- Buat file baru: main/static/css/custom.css + tambahkan css codes
+- Testing: berhasil
+- Git commit
