@@ -1,3 +1,11 @@
 <!-- templates/app/accounts/dashboard.html -->
 
-DASHBOARD
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Welcome {{user.username}}</h4>
+
+{% include 'includes/alert.html' %}
+
+{% endblock content %}

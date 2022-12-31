@@ -672,3 +672,12 @@ And if your farm has any files, then you should receive it like this.
 - Testing: berhasil
 - Git commit
 
+### 07.6.1 Login Logout Feature - Add logic to login method
+
+- modified:   README.md
+- modified:   app/accounts/views.py (membuat login logik)
+- new file:   media/vendor/license/license-sample-image_coGLyF6.jpg
+- modified:   templates/app/accounts/dashboard.html (load logged in customer or vendor)
+- modified:   templates/includes/navbar.html (add link to login)
+- Testing: berhasil
+- Git commit
