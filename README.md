@@ -624,3 +624,15 @@ Otherwise, your files will not get uploaded into the form.
 - modified:   templates/includes/navbar.html (menambahkan link)
 - Testing: berhasil
 - Git commit
+
+### 07.3.2 Kombinasi data kustomer (user) dan vendor - create user
+
+So now this is the file.
+So while receiving the file, we also need to pass a request for files in this vendor form.
+So this request post will contain only the character field, care field, all these kinds of stuff.
+And if your farm has any files, then you should receive it like this.
+
+- modified:   README.md
+- modified:   app/accounts/views.py
+- Testing: belum bisa di test
+- Git commit

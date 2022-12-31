@@ -83,8 +83,29 @@ def registeruser(request):
 
 # Vendor: register
 def registervendor(request):
-	ureg_form = UserRegistrationForm # ureg_form is for UserForm in short
-	vreg_form = VendorRegistrationForm # vreg_form is for VendorForm in short
+	# Check if the request is POST
+	if request.method == 'POST':
+		# Store the data and create user
+		ureg_form = UserRegistrationForm(request.POST)
+		vreg_form = VendorRegistrationForm(request.POST, request.FILES)
+		# Check if form is valid
+		if ureg_form.is_valid() and vreg_form.is_valid():
+			first_name = form.cleaned_data['first_name']
+			last_name = form.cleaned_data['last_name']
+			username = form.cleaned_data['username']
+			email = form.cleaned_data['email']
+			password = form.cleaned_data['password']
+			user = CustomUser.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
+			user.role = CustomUser.VENDOR
+			user.save()
+		else:
+			print('invalid ureg_form and vreg_form')
+			print(ureg_form.errors)
+			print(vreg_form.errors)
+	else:
+		ureg_form = UserRegistrationForm()
+		vreg_form = VendorRegistrationForm()
+
 	context = {
 		'ureg_form': ureg_form,
 		'vreg_form': vreg_form
