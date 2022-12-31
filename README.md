@@ -689,3 +689,15 @@ And if your farm has any files, then you should receive it like this.
 - modified:   templates/includes/navbar.html (add link)
 - Testing: berhasil, tetapi django message tidak muncul
 - Git commit
+
+### 07.6.3 Login Logout Feature - Add conditional to the navbar
+
+- modified:   README.md
+- modified:   templates/includes/navbar.html
+- Testing: Django message for logout bertumpuk dgn login message.
+- Git commit
+
+NOTE:
+
+Setiap orang bisa mengakses pages tanpa harus login terlebih
+dahulu. 
