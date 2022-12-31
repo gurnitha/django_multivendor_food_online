@@ -510,3 +510,10 @@ will be available in all of your HTML files.
 - Buat file baru: main/static/css/custom.css + tambahkan css codes
 - Testing: berhasil
 - Git commit
+
+### 14.2 Messages Animation - Part 2: Menggunakan Django message tag
+
+- modified:   main/settings.py (menambahkan django message tag)
+- modified:   templates/includes/alert.html (modifikasi kelas css)
+- Testing: berhasil
+- Git commit
