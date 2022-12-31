@@ -665,4 +665,10 @@ And if your farm has any files, then you should receive it like this.
 - Testing: berhasil
 - Git commit
 
+### 07.5.2 Adding template to login page
+
+- modified:   README.md
+- modified:   templates/app/accounts/login.html
+- Testing: berhasil
+- Git commit
 
