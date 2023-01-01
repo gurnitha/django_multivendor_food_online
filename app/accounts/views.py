@@ -124,7 +124,12 @@ def registervendor(request):
 
 # User or Vendor: Login
 def login(request):
-	if request.method == 'POST':
+	# Handling the loggeg in user
+	if request.user.is_authenticated:
+		messages.warning(request, 'You are already logged in!')
+		return redirect('accounts:dashboard')
+
+	elif request.method == 'POST':
 		email = request.POST['email']
 		password = request.POST['password']
 		user = auth.authenticate(email=email, password=password)
