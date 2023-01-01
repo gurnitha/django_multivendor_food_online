@@ -724,5 +724,28 @@ if request.user.is_authenticated:
 
 - modified:   README.md
 - modified:   app/accounts/views.py
-- Testing: berhasil
+- Testing: berhasil, namun logged in user masih bisa akses laman registeruser dan registervendor
+- Git commit
+
+### 07.7.2 Restrict Loggedin Users From Accessing Loginpage And Register Page - Restricting logged in user to registeruser page
+
+Situation:
+
+Logged in user still showing the registration page, so that should not happen.
+
+STEPS:
+
+1. We will handle the logged in user not to login again. DONE ABOVE.
+2. Restric the logged in user from registeruser page. If the logged in
+user try to do this, we will give him a warning.
+
+We will do this:
+
+if request.user.is_authenticated:
+	messages.warning(request, 'You are already logged in!')
+	return redirect('accounts:dashboard')
+
+- modified:   README.md
+- modified:   app/accounts/views.py
+- Testing: berhasil, namun logged in user masih bisa akses laman registervendor
 - Git commit

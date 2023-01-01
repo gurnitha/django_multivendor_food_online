@@ -16,7 +16,11 @@ from app.vendors.forms import VendorRegistrationForm
 
 # User: register
 def registeruser(request):
-
+	# Handling the loggeg in user
+	if request.user.is_authenticated:
+		messages.warning(request, 'You are already logged in!')
+		return redirect('accounts:dashboard')
+		
 	# Check if the request is POST or GET
 	
 	# if the request is post
