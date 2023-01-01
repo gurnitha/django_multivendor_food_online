@@ -168,6 +168,18 @@ class CustomUser(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
+    # To distinguished logged in user as VENDOR OR CUSTOMER
+    """
+    We have created this get_role function.
+    This get_role function is under the class CustomeUser.
+    This get_role function can be accessed as a field name.
+    So this is actually not a field name.
+    It is a function under the class CustomeUser.
+    But still you can you can actually access this as its field.
+    So that's why I'm accessing like user.get_role (user dot get_role)
+    in the dashboard.
+    So this will work and I will refresh.
+    """
     def get_role(self):
         if self.role == 1:
             user_role = 'Vendor'

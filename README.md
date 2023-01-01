@@ -774,3 +774,51 @@ if request.user.is_authenticated:
 - Testing: berhasil, namun masih ada restriksi lain yg harus dilakukan.
 Kita akan handel masalah ini satu per satu.
 - Git commit
+
+### 07.8.1 Detect User And Redirect Him To Respective Dashboard - Showing logge in as customer or vendor
+
+Situation:
+
+1. Logged in customer, can access dashboard page. 
+2. Logged in vendor, also can access dashboard page.
+3. Ideally, each of them should go to their respective dashboard page.
+
+To see the above situation, open browser incognito you will see it.
+
+We need to actually send the logged in vendor to the vendor dashboard.
+And to do the same to logged in customer: to send logged in customer
+to customer dashboard.
+
+In this case, who is going to decide whether the user is a customer or a vendor?
+For that, we need a separate function.
+That function will actually take care of redirecting the user to his dashboard.
+We will call that function as my account.
+
+We also will make a custom function to get the role.
+We will make customize function in the app/accounts/models.py page.
+
+The next step is to decide whether the logged in user is a vendor or a customer.
+This is what we will do now.
+
+
+We have created this get_role function.
+This get_role function is under the class CustomeUser.
+This get_role function can be accessed as a field name.
+So this is actually not a field name.
+It is a function under the class CustomeUser.
+But still you can you can actually access this as its field.
+So that's why I'm accessing like user.get_role (user dot get_role).
+So this will work and I will refresh.
+
+    def get_role(self):
+        if self.role == 1:
+            user_role = 'Vendor'
+        elif self.role == 2:
+            user_role = 'Customer'
+        return user_role
+
+- modified:   README.md
+- modified:   app/accounts/models.p.
+- modified:   templates/app/accounts/dashboard.html
+- Testing: berhasil membedakan logged in user sebagai customer dan vendor,
+- Git commit
