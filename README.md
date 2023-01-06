@@ -939,3 +939,9 @@ So this will work and I will refresh.
 
         Configure CUSTOME ERROR CODE
 
+
+### 07.8.5 Configuring 403 error page
+
+        modified:   README.md
+        new file:   templates/403.html
+
