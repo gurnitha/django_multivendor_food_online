@@ -863,3 +863,40 @@ So this will work and I will refresh.
         modified:   app/accounts/views.py
         deleted:    templates/app/accounts/custDashboard.html
         deleted:    templates/app/accounts/vendorDashboard.html
+
+
+### 07.8.2 Detect User And Redirect Him To Respective Dashboard
+
+        modified:   README.md
+        modified:   app/accounts/urls.py
+        modified:   app/accounts/utils.py
+        modified:   app/accounts/views.py
+        new file:   templates/app/accounts/custDashboard.html
+        new file:   templates/app/accounts/vendorDashboard.html
+        modified:   templates/includes/navbar.html
+
+        :)
+
+		Let me log in again as vendor.
+		Now I am actually the vendor.
+		So even if you click on this myAccount page, this will take you to the vendor dashboard.
+		So that's how you decide whether the logged in user is a customer or the vendor.
+
+		So there is one more problem with this.
+
+		My account URL.
+		If you go to if you replace this login with my account like this: http://127.0.0.1:8000/accounts/myAccount/, 
+		you are going to get the error. The anonymous user object has no attribute role.
+
+		That's because you see what we are doing in the view.
+		Start by in the my account view we are taking the user is equal to request user who is request dot user
+		here request or user is the person who is logged in.
+
+		Okay, so this my account should run only when the person is logged in.
+		If you are not logged in, you are not supposed to enter into this view.
+		So for that, what we need to do, we need to actually make use of our decorator called login required.
+
+		NEXT:
+
+		1. myAccount method should run only when the person is logged in.
+		2. Make use of our decorator called login required
