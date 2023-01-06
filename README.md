@@ -911,4 +911,31 @@ So this will work and I will refresh.
         use this to protect:
         >> from django.contrib.auth.decorators import login_required
 
+### 07.8.4 Protecting customer from accessing vendor dashboard or vice versa
+
+		NOTE:
+
+		1. Customer can still accessing vendor dashboard.
+		2. Vendor can still accessing customer dashboard.
+
+		NEXT:
+
+		Protecting both of them:
+
+		1. Vendor dashboard for vendor only (customer can not have access to this).
+		2. Customer dashboard for customer only  (vendor can not have access to this).
+
+
+        modified:   README.md
+        modified:   app/accounts/views.py
+
+        NOTE:
+
+        1. Testing success
+        2. If customer tried access vendor page, it showed 403 forbidded message
+           and vice versa
+
+        NEXT:
+
+        Configure CUSTOME ERROR CODE
 

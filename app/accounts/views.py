@@ -6,7 +6,8 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages, auth
 from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.core.exceptions import PermissionDenied
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
@@ -15,6 +16,23 @@ from app.vendors.forms import VendorRegistrationForm
 from app.accounts.utils import detectUser
 
 # Create your views here.
+
+
+# Restrict the vendor from accessing the customer page
+def check_role_vendor(user):
+    if user.role == 1:
+        return True
+    else:
+        raise PermissionDenied
+
+
+# Restrict the customer from accessing the vendor page
+def check_role_customer(user):
+    if user.role == 2:
+        return True
+    else:
+        raise PermissionDenied
+
 
 # User: register
 def registeruser(request):
@@ -169,13 +187,21 @@ def myAccount(request):
     redirectUrl = detectUser(user)
     return redirect(redirectUrl)
 
-@login_required(login_url='accounts:login')
-def custDashboard(request):
-    return render(request, 'app/accounts/custDashboard.html')
+
 
 @login_required(login_url='accounts:login')
+@user_passes_test(check_role_vendor)
 def vendorDashboard(request):
     return render(request, 'app/accounts/vendorDashboard.html')
+
+
+
+
+
+@login_required(login_url='accounts:login')
+@user_passes_test(check_role_customer)
+def custDashboard(request):
+    return render(request, 'app/accounts/custDashboard.html')
 
 
 def dashboard(request):
