@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages, auth
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
@@ -162,16 +163,17 @@ def logout(request):
 	return redirect('accounts:login')
 
 
+@login_required(login_url='accounts:login')
 def myAccount(request):
     user = request.user
     redirectUrl = detectUser(user)
     return redirect(redirectUrl)
 
-
+@login_required(login_url='accounts:login')
 def custDashboard(request):
     return render(request, 'app/accounts/custDashboard.html')
 
-
+@login_required(login_url='accounts:login')
 def vendorDashboard(request):
     return render(request, 'app/accounts/vendorDashboard.html')
 

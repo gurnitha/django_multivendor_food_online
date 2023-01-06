@@ -900,3 +900,15 @@ So this will work and I will refresh.
 
 		1. myAccount method should run only when the person is logged in.
 		2. Make use of our decorator called login required
+
+### 07.8.3 Protecting myAccount, vendorDashboard, and custDashboard from un-logged in user
+
+        modified:   README.md
+        modified:   app/accounts/views.py
+
+        NOTE:
+
+        use this to protect:
+        >> from django.contrib.auth.decorators import login_required
+
+
