@@ -6,6 +6,7 @@ sourcecodes
 main/static/
 static
 .env
+docs
 
 __pycache__/
 *.py[cod]

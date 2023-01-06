@@ -822,3 +822,33 @@ So this will work and I will refresh.
 - modified:   templates/app/accounts/dashboard.html
 - Testing: berhasil membedakan logged in user sebagai customer dan vendor,
 - Git commit
+
+### kacau
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   app/accounts/models.py
+        modified:   app/accounts/urls.py
+        new file:   app/accounts/utils.py
+        modified:   app/accounts/views.py
+        new file:   templates/app/accounts/custDashboard.html
+        modified:   templates/app/accounts/dashboard.html
+        new file:   templates/app/accounts/vendorDashboard.html
+        modified:   templates/includes/navbar.html
+
+### kacau 2: try to recover and learn git chekcout again
+
+        modified:   app/accounts/models.py
+        modified:   templates/app/accounts/dashboard.html
+
+### try to checkout but done with reset
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   app/accounts/models.py
+        modified:   app/accounts/urls.py
+        new file:   app/accounts/utils.py
+        modified:   app/accounts/views.py
+        new file:   templates/app/accounts/custDashboard.html
+        new file:   templates/app/accounts/vendorDashboard.html
+        modified:   templates/includes/navbar.html

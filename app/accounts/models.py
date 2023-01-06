@@ -18,9 +18,9 @@ UserManager class will:
 2. not have any field
 """
 # class UserManager(BaseUserManager):
-# 	# Defining create_user method with parameters:self, first_name, last_name, username, email, password=None
+#   # Defining create_user method with parameters:self, first_name, last_name, username, email, password=None
 #     def create_user(self, first_name, last_name, username, email, password=None):
-#     	# Check email
+#       # Check email
 #         if not email:
 #             raise ValueError('User must have an email address')
 
@@ -45,8 +45,8 @@ UserManager class will:
 
 #     # Defining create_superuser method with parameters:self, first_name, last_name, username, email, password=None
 #     def create_superuser(self, first_name, last_name, username, email, password=None):
-#     	# The 'normal user' actually has been created using the create_user method above. 
-#     	# Now assigning it as superuser with these values: email, username, password, first_name, and last_name.
+#       # The 'normal user' actually has been created using the create_user method above. 
+#       # Now assigning it as superuser with these values: email, username, password, first_name, and last_name.
 #         user = self.create_user(
 #             email = self.normalize_email(email),
 #             username = username,
@@ -134,7 +134,6 @@ class CustomUser(AbstractBaseUser):
     Django uses username as a login field by default.
     But we want to use email as login filed, instead of username.
     So we have to override the username.
-
     We also define the required fields: username, first_name, and last_name.
     So the required field is username.
     Email is also required field, but we don't need to put that email inside the required
@@ -206,7 +205,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.email
-
-
-
-
