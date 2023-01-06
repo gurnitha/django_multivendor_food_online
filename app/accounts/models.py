@@ -134,6 +134,7 @@ class CustomUser(AbstractBaseUser):
     Django uses username as a login field by default.
     But we want to use email as login filed, instead of username.
     So we have to override the username.
+
     We also define the required fields: username, first_name, and last_name.
     So the required field is username.
     Email is also required field, but we don't need to put that email inside the required
@@ -205,3 +206,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.email
+
+
+
+

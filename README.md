@@ -852,3 +852,14 @@ So this will work and I will refresh.
         new file:   templates/app/accounts/custDashboard.html
         new file:   templates/app/accounts/vendorDashboard.html
         modified:   templates/includes/navbar.html
+
+
+### RETURN TO: 07.8.1 Detect User And Redirect Him To Respective Dashboard - Showing logge in as customer or vendor
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   app/accounts/models.py
+        modified:   app/accounts/urls.py
+        modified:   app/accounts/views.py
+        deleted:    templates/app/accounts/custDashboard.html
+        deleted:    templates/app/accounts/vendorDashboard.html

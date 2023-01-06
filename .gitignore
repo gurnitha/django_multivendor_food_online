@@ -7,6 +7,8 @@ main/static/
 static
 .env
 docs
+_docs
+
 
 __pycache__/
 *.py[cod]

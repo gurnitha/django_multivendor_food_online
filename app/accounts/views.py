@@ -6,13 +6,11 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages, auth
 from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
 
 # Locals
 from app.accounts.forms import UserRegistrationForm
 from app.accounts.models import CustomUser, UserProfile
 from app.vendors.forms import VendorRegistrationForm
-from app.accounts.utils import detectUser
 
 # Create your views here.
 
@@ -132,13 +130,12 @@ def registervendor(request):
 	}
 	return render(request, 'app/accounts/registerVendor.html', context)
 
-
 # User or Vendor: Login
 def login(request):
 	# Handling the loggeg in user
 	if request.user.is_authenticated:
 		messages.warning(request, 'You are already logged in!')
-		return redirect('accounts:myAccount')
+		return redirect('accounts:dashboard')
 
 	elif request.method == 'POST':
 		email = request.POST['email']
@@ -148,33 +145,7 @@ def login(request):
 		if user is not None:
 			auth.login(request, user)
 			messages.success(request, 'You are now logged in.')
-			return redirect('accounts:myAccount')
-		# If user is not exist
-		else: 
-			messages.error(request, 'Invalid login credentials')
-			return redirect('accounts:login')
-
-	return render(request, 'app/accounts/login.html')
-
-
-
-
-# User or Vendor: Login
-def login(request):
-	# Handling the loggeg in user
-	if request.user.is_authenticated:
-		messages.warning(request, 'You are already logged in!')
-		return redirect('accounts:myAccount')
-
-	elif request.method == 'POST':
-		email = request.POST['email']
-		password = request.POST['password']
-		user = auth.authenticate(email=email, password=password)
-		# If user exist
-		if user is not None:
-			auth.login(request, user)
-			messages.success(request, 'You are now logged in.')
-			return redirect('accounts:myAccount')
+			return redirect('accounts:dashboard')
 		# If user is not exist
 		else: 
 			messages.error(request, 'Invalid login credentials')
@@ -188,69 +159,6 @@ def logout(request):
 	auth.logout(request)
 	messages.info(request, 'You are logged out. Login again?')
 	return redirect('accounts:login')
-
-# User or Vendor: Login
-def login(request):
-	# Handling the loggeg in user
-	if request.user.is_authenticated:
-		messages.warning(request, 'You are already logged in!')
-		return redirect('accounts:myAccount')
-
-	elif request.method == 'POST':
-		email = request.POST['email']
-		password = request.POST['password']
-		user = auth.authenticate(email=email, password=password)
-		# If user exist
-		if user is not None:
-			auth.login(request, user)
-			messages.success(request, 'You are now logged in.')
-			return redirect('accounts:myAccount')
-		# If user is not exist
-		else: 
-			messages.error(request, 'Invalid login credentials')
-			return redirect('accounts:login')
-
-	return render(request, 'app/accounts/login.html')
-
-
-# Logout: Customer or Vendor
-def logout(request):
-	auth.logout(request)
-	messages.info(request, 'You are logged out. Login again?')
-	return redirect('accounts:login')
-
-# Logout: Customer or Vendor
-def logout(request):
-	auth.logout(request)
-	messages.info(request, 'You are logged out. Login again?')
-	return redirect('accounts:login')
-
-
-# @login_required(login_url='accounts:login')
-# def myAccount(request):
-# 	user = request.user  
-# 	redirecturl = detectUser(user)
-# 	return redirect(redirecturl)
-
-
-# @login_required(login_url='accounts:login')
-# def myAccount(request):
-#     user = request.user
-#     redirectUrl = detectUser(user)
-#     return redirect(redirectUrl)
-
-
-# # @login_required(login_url='accounts:login')
-# def custDashboard(request):
-# 	return render(request, 'app/accounts/custDashboard.html')
-
-
-# # @login_required(login_url='accounts:login')
-# def vendorDashboard(request):
-# 	return render(request, 'app/accounts/vendorDashboard.html')
-
-
-
 
 def dashboard(request):
 	return render(request, 'app/accounts/dashboard.html')
